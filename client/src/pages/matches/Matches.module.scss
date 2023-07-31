@@ -1,0 +1,103 @@
+@import '../../styles/variables';
+
+.matchesWrapper {
+    .container {
+        width: 75%;
+        margin: 0 auto;
+
+        .results {
+            margin-top: 102px;
+            display: flex;
+
+            .result__img {
+                width: 185px;
+                height: 247px;
+                border: 2px dashed $dash;
+                border-radius: 13px;
+
+                .img {
+                    width: 185px;
+                    height: 247px;
+                    object-fit: cover;
+                    border-radius: 13px;
+                }
+            }
+
+            .processing__results {
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+                position: relative;
+                width: 829px;
+                
+                .processing__results__status {
+                    font-size: 30px;
+                    font-weight: 600;
+                    margin-left: 37px;
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+
+                .results__more {
+                    position: absolute;
+                    bottom: 0;
+                    right: -61px;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: start;
+                    gap: 7px;
+                }
+            }
+        }
+
+        .sources {
+            font-size: 30px;
+            font-weight: 600;
+            margin: 26px 0 26px;
+        }
+
+        .open__sources {
+            display: flex;
+            gap: 29px;
+            
+            .card {
+                display: flex;
+                flex-direction: column;
+                width: 349px;
+                border-radius: 15px;
+                background: $white;
+                box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.10);
+                padding: 23px 34px 37px 34px;
+
+                .card__img {
+                    width: 280px;
+                    height: 246px;
+                    border-radius: 13px;
+                    object-fit: cover;
+                }
+
+                &__content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 29px;
+                    margin-top: 13px;
+
+                    .card__text {
+                        width: 282px;
+                        min-height: 51px;
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+
+                    .card__link {
+                        color: $link;
+                        font-size: 12px;
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,24 @@
+.header__wrapper {
+  background: #F2F0EE;
+}
+.header__wrapper .container {
+  width: 90%;
+  margin: 0 auto;
+}
+.header__wrapper .container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 59px;
+}
+.header__wrapper .container .header .logo {
+  display: flex;
+  align-items: center;
+}
+.header__wrapper .container .header .logo .logo__text {
+  color: #000;
+  font-size: 31px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+}/*# sourceMappingURL=Header.module.css.map */

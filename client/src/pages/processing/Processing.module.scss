@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.processingWrapper {
+    .indicator {
+        margin-top: 38px;
+    }
+    .container {
+        width: 75%;
+        margin: 0 auto;
+
+        .processing__block {
+            display: flex;
+            margin-top: 101px;
+            gap: 35px;
+
+            .processing__img {
+                border-radius: 13px;
+                border: 2px dashed #9C9C9C;
+            }
+        }
+
+        .processing__index {
+            display: flex;
+            flex-direction: column;
+
+            .processing__status {
+                font-size: 30px;
+                font-weight: 700;
+            }
+
+            .processing__range {
+                width: 715px;
+                height: 22px;
+                border-radius: 6px;
+                background: $main-color;
+                margin-top: 38px;
+            }
+        }
+    }
+}

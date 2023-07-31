@@ -1,0 +1,87 @@
+@import '../../styles/variables';
+
+.resultsWrapper {
+    .container {
+        width: 75%;
+        margin: 0 auto;
+
+        .results {
+            margin-top: 102px;
+            display: flex;
+
+            .result__img {
+                width: 185px;
+                height: 247px;
+                border: 2px dashed $dash;
+                border-radius: 13px;
+            }
+
+            .processing__results {
+                display: flex;
+                position: relative;
+                width: 829px;
+                
+                .processing__results__status {
+                    width: 512px;
+                    font-size: 30px;
+                    font-weight: 600;
+                    margin-left: 37px;
+                }
+
+                .results__more {
+                    position: absolute;
+                    bottom: 0;
+                    right: -61px;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: start;
+                    gap: 7px;
+                }
+            }
+        }
+
+        .mathces {
+            font-size: 30px;
+            font-weight: 600;
+            margin: 27px 0 26px;
+        }
+
+        .found__mathces {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+            .card__link {
+                text-decoration: none;
+            }
+        
+            .card {
+                display: flex;
+                padding: 24px;
+                border-radius: 15px;
+                background: #FFF;
+                box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.10);
+            
+                .card__img {
+                    width: 185px;
+                    height: 246px;
+                    object-fit: cover;
+                    border-radius: 13px;      
+                }
+        
+                .card__content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+                    margin-left: 35px;
+        
+                    .card__text {
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: $black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

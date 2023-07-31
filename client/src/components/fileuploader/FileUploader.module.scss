@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap');
+@import '../../styles/variables';
+
+.file__selector {
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 587px;
+    height: 362px;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px dashed #9C9C9C;
+    background: linear-gradient(360deg, rgba(156, 156, 156, 0.37) 0%, rgba(255, 255, 255, 0.00) 100%);
+
+    .choose_another {
+        position: relative;
+
+        .button__container {
+            position: absolute;
+            top: 400px;
+            left: 23%;
+            
+
+            .choose__another__file__button {
+                background: $main-color;
+                color: $white;
+
+                &:hover {
+                    background: $white;
+                    color: $main-color;
+
+                }
+            }
+
+            .search__button {
+                background: $main-color;
+                color: $white;
+                margin-left: 30px;
+
+                &:hover {
+                    background: $white;
+                    color: $main-color;
+
+                }
+
+            }
+
+        }
+        
+    }
+
+    .picture__selected__img {
+        .picture__select {
+            width: 169px;
+            height: 141px;
+        }
+    
+        .file__text {
+            margin: 14px 0 17px;
+            color: $fileSelector-text;
+            font-family: 'Archivo', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    
+        .file__text__or {
+            color: $fileSelector-text;
+            font-family: 'Archivo', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .custom__file__input {
+            width: 175px;
+            height: 52px;
+            background: $main-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            font-family: 'Archivo', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 14px;
+        }
+        .hidden__input {
+            display: none;
+        }
+    }
+
+
+    
+}

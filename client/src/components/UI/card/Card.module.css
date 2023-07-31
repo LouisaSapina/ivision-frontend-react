@@ -1,0 +1,35 @@
+/* color */
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.cardWrapper .card__link {
+  text-decoration: none;
+}
+.cardWrapper .card {
+  display: flex;
+  padding: 24px;
+  border-radius: 15px;
+  background: #FFF;
+  box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.1);
+}
+.cardWrapper .card .card__img {
+  width: 185px;
+  height: 246px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 13px;
+}
+.cardWrapper .card .card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-left: 35px;
+}
+.cardWrapper .card .card__content .card__text {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+}/*# sourceMappingURL=Card.module.css.map */

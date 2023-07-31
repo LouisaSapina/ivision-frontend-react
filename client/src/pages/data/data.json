@@ -1,0 +1,40 @@
+
+{
+    "photos": [
+      {
+        "id": 1,
+        "url": "https://images.unsplash.com/photo-1635488640163-e5f6782cda6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
+        "name": "Жамал Бибер Макуовна",
+        "iin": "020922550560",
+        "dateOfBirth": "22.08.2002"
+      },
+      {
+        "id": 2,
+        "url": "https://images.unsplash.com/photo-1660951381925-57ac7e40c40d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+        "name": "Екатерина Петрова Николаевна",
+        "iin": "921211234888",
+        "dateOfBirth": "11.12.1992"
+      }
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "url": "https://nationaltoday.com/wp-content/uploads/2022/04/51-Gigi-Hadid-1200x834.jpg",
+        "title": "Gigi Hadid Wore a Bright Green Monochromatic Look | Teen Vogue",
+        "link": "https://www.teenvogue.com/story/gigi-hadid-green-monochromatic-look"
+      },
+      {
+        "id": 2,
+        "url": "https://www.billboard.com/wp-content/uploads/2023/06/Kim-Kardashian-at-the-Louis-Vuitton-Spring-2024-billboard-1548.jpg?w=942&h=623&crop=1",
+        "title": "Kim Kardashian Breaks Down Over Kanye West in 'The Kardashians' Teaser – Billboard",
+        "link": "https://www.billboard.com/music/music-news/kim-kardashian-kanye-west-bre......"
+      },
+      {
+        "id": 3,
+        "url": "https://m.media-amazon.com/images/M/MV5BOTc0MGMzNDEtMWIzZS00Mzg5LWI3MGMtMDg3MGNmYTBiMzYxXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg",
+        "title": "Camila Cabello - IMDb",
+        "link": "https://www.imdb.com/name/nm5305981/"
+      }
+    ]
+  }
+  

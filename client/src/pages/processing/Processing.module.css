@@ -1,0 +1,32 @@
+/* color */
+.processingWrapper .indicator {
+  margin-top: 38px;
+}
+.processingWrapper .container {
+  width: 75%;
+  margin: 0 auto;
+}
+.processingWrapper .container .processing__block {
+  display: flex;
+  margin-top: 101px;
+  gap: 35px;
+}
+.processingWrapper .container .processing__block .processing__img {
+  border-radius: 13px;
+  border: 2px dashed #9C9C9C;
+}
+.processingWrapper .container .processing__index {
+  display: flex;
+  flex-direction: column;
+}
+.processingWrapper .container .processing__index .processing__status {
+  font-size: 30px;
+  font-weight: 700;
+}
+.processingWrapper .container .processing__index .processing__range {
+  width: 715px;
+  height: 22px;
+  border-radius: 6px;
+  background: #5C92C4;
+  margin-top: 38px;
+}/*# sourceMappingURL=Processing.module.css.map */

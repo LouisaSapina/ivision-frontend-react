@@ -1,0 +1,40 @@
+@import '../../../styles/variables';
+
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    .card__link {
+        text-decoration: none;
+    }
+
+    .card {
+        display: flex;
+        padding: 24px;
+        border-radius: 15px;
+        background: #FFF;
+        box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.10);
+    
+        .card__img {
+            width: 185px;
+            height: 246px;
+            object-fit: cover;
+            border-radius: 13px;      
+        }
+
+        .card__content {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            margin-left: 35px;
+
+            .card__text {
+                font-size: 22px;
+                font-weight: 600;
+                color: $black;
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@import '../../styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap');
+
+.home__wrapper {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+
+        .search__line {
+            display: flex;
+            flex-direction: column;
+            margin-top: 156px;
+
+            .search__text {
+                margin-left: 105px;
+                font-size: 27px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            .search {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 9px;
+
+                .search__input {
+                    width: 951px;
+                    height: 44px;
+                    border-radius: 10px;
+                    border: 3px solid $main-color;
+                    outline: none;
+                    padding: 0 10px;
+                }
+    
+                .submit__btn {
+                    width: 155px;
+                    height: 50px;
+                    margin-left: 10px;
+                    border-radius: 8px;
+                    border: 3px solid $main-color;
+                    background: $main-color;
+                    outline: none;
+                    color: $white;
+                    font-family: 'Archivo', sans-serif;
+                    font-size: 19px;
+                    font-weight: 600;
+                    line-height: normal;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .or {
+            margin: 55px 0 54px;
+            font-size: 27px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .file__selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 45px 0;
+        }
+    }
+}

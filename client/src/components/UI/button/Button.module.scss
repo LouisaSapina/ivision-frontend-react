@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap');
+
+.button {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #5C92C4;
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+    color: #5C92C4;
+    font-weight: 600;
+    padding: 16px 11px 15px 12px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #5C92C4;
+    color: #fff;
+    transition: .3s;
+}

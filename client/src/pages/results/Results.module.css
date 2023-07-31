@@ -1,0 +1,74 @@
+/* color */
+.resultsWrapper .container {
+  width: 75%;
+  margin: 0 auto;
+}
+.resultsWrapper .container .results {
+  margin-top: 102px;
+  display: flex;
+}
+.resultsWrapper .container .results .result__img {
+  width: 185px;
+  height: 247px;
+  border: 2px dashed #9C9C9C;
+  border-radius: 13px;
+}
+.resultsWrapper .container .results .processing__results {
+  display: flex;
+  position: relative;
+  width: 829px;
+}
+.resultsWrapper .container .results .processing__results .processing__results__status {
+  width: 512px;
+  font-size: 30px;
+  font-weight: 600;
+  margin-left: 37px;
+}
+.resultsWrapper .container .results .processing__results .results__more {
+  position: absolute;
+  bottom: 0;
+  right: -61px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: start;
+  gap: 7px;
+}
+.resultsWrapper .container .mathces {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 27px 0 26px;
+}
+.resultsWrapper .container .found__mathces {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.resultsWrapper .container .found__mathces .card__link {
+  text-decoration: none;
+}
+.resultsWrapper .container .found__mathces .card {
+  display: flex;
+  padding: 24px;
+  border-radius: 15px;
+  background: #FFF;
+  box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.1);
+}
+.resultsWrapper .container .found__mathces .card .card__img {
+  width: 185px;
+  height: 246px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 13px;
+}
+.resultsWrapper .container .found__mathces .card .card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-left: 35px;
+}
+.resultsWrapper .container .found__mathces .card .card__content .card__text {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+}/*# sourceMappingURL=Results.module.css.map */
