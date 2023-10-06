@@ -4,7 +4,7 @@ import cl from './FileUploader.module.css';
 import picture from '../../assets/icons/img.svg';
 import Button from '../UI/button/Button';
 
-const FileUploader = () => {
+const FileUploader = (props) => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [fileError, setFileError] = useState(false);
 
@@ -37,7 +37,8 @@ const FileUploader = () => {
 
     const handleSubmit = () => {
         // console.log(selectedFile)
-        navigate(`/search`);
+        props.handleFileUpload(selectedFile);
+        props.handleFileSearch();
     };
 
     const handleSearch = () => {

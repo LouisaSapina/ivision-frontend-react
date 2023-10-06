@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import cl from './Results.module.css';
-import resultImg from '../../assets/images/example-data.jpg';
+// import resultImg from '../../assets/images/example-data.jpg';
 import Header from '../../components/header/Header';
 import pdf from '../../assets/icons/pdf.png';
 import Button from '../../components/UI/button/Button';
@@ -15,7 +15,7 @@ import jsonResponse from './jsonResponse.js'
 import './results.scss';
 
 
-function Results() {
+function Results(props) {
     const canvasRef = useRef(null);
     const [currentSubject, setCurrentSubject] = useState(null);
     const [hoverSubject, setHoverSubject] = useState(null);
@@ -26,16 +26,27 @@ function Results() {
     const [results, setResults] = useState([]);
     const [databaseData, setDatabaseData] = useState([])
 
+    const [resultImg, setResultImg] = useState(null)
+    
+    useEffect(() => {
+        setResultImg(props.file)
+    }, [])
+
     useEffect(() => {
         async function fetchData() {
             try {
-                const res = await axios.post('http://localhost:23000/subjectsList', {
-                    image: resultImg
+                // Create a FormData object to send the image file
+                const formData = new FormData();
+                formData.append('image', props.file);
+    
+                const res = await axios.post('http://localhost:23000/subjectsList', formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data', // Set the content type to multipart/form-data
+                    },
                 });
-                console.log(res.data);
+    
                 setResults(res.data.recognitionData);
                 setDatabaseData(res.data.databaseData);
-                console.log(results);
             } catch (error) {
                 console.error(error);
             }
@@ -43,6 +54,7 @@ function Results() {
     
         fetchData();
     }, []);
+    
 
 
     useEffect(() => {
@@ -50,129 +62,140 @@ function Results() {
         const ctx = canvas.getContext('2d');
     
         const img = new Image();
-        img.src = resultImg;
+        img.src = URL.createObjectURL(props.file);
     
-        const circles = [
-            { 
-                centerX: '', 
-                centerY: '', 
-                radius: '', 
-                subject: '', 
-            }
+        let circles = [
+            // { 
+            //     centerX: '', 
+            //     centerY: '', 
+            //     radius: '', 
+            //     subject: '', 
+            // }
         ];
     
+        // Define the desired canvas dimensions
+        const canvasWidth = 700;
+        const canvasHeight = 500;
+    
         img.onload = () => {
-        canvas.width = img.width;
-        canvas.height = img.height;
+            canvas.width = canvasWidth;
+            canvas.height = canvasHeight;
     
-        ctx.drawImage(img, 0, 0, img.width, img.height);
+            // Calculate the scale factors for the image
+            const scaleX = canvasWidth / img.width;
+            const scaleY = canvasHeight / img.height;
     
-        canvas.addEventListener('mousemove', (event) => {
-            const rect = canvas.getBoundingClientRect();
-            const mouseX = event.clientX - rect.left;
-            const mouseY = event.clientY - rect.top;
+            // Adjust the circle positions based on the scaling factors
+            circles = circles.map(circle => ({
+                centerX: circle.centerX * scaleX,
+                centerY: circle.centerY * scaleY,
+                radius: circle.radius * Math.min(scaleX, scaleY),
+                subject: circle.subject,
+            }));
     
-            setMouseXpos(mouseX);
-            setMouseYpos(mouseY);
-
-            circles.forEach(circle => {
-                if (Math.sqrt((mouseX - circle.centerX) ** 2 + (mouseY - circle.centerY) ** 2) <= circle.radius) {
-                    canvas.style.cursor = 'pointer';
-                    handleCircleMouseMove(circle.subject);
-                }
-            })
-
-            redrawCanvas();
-        });
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     
-        canvas.addEventListener('mouseout', () => {
-            handleCircleMouseOut();
-        });
-
-        canvas.addEventListener('click', (event) => {
-            const rect = canvas.getBoundingClientRect();
-            const mouseX = event.clientX - rect.left;
-            const mouseY = event.clientY - rect.top;
-
-            circles.forEach(circle => {
-                if (
-                    Math.sqrt((mouseX - circle.centerX) ** 2 + (mouseY - circle.centerY) ** 2) <= circle.radius
-                ) {
-                    handleCircleClick(circle.subject);
-                }
-            })
-        });
-
-        const handleCircleMouseMove = (subject) => {
-            setHoverSubject(subject);
-            redrawCanvas();
-        };
+            canvas.addEventListener('mousemove', (event) => {
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = (event.clientX - rect.left) * scaleX; // Adjust for scaling
+                const mouseY = (event.clientY - rect.top) * scaleY;   // Adjust for scaling
     
-        const handleCircleMouseOut = () => {
-            canvas.style.cursor = 'default';
-            redrawCanvas();
-        };
-
-        const handleCircleClick = (subject) => {
-            setCurrentSubject(subject);
-
-            redrawCanvas();
-        };
-
-        
+                setMouseXpos(mouseX);
+                setMouseYpos(mouseY);
     
-        if (Array.isArray(results)) {
-            results.forEach(subject => {
-                let { x_min, x_max, y_min, y_max } = subject.box;
-        
-                const centerX = (x_max + x_min) / 2;
-                const centerY = (y_max + y_min) / 2;
-        
-                const radius = Math.max((x_max - x_min) / 2, (y_max - y_min) / 2);
-        
-                
-        
-                circles.push({ centerX, centerY, radius, subject });
-                
+
+                console.log(circles, results, mouseX, mouseY)
+
+                canvas.style.cursor = 'pointer';
+
+
+                circles.forEach(circle => {
+                    if (Math.sqrt((mouseX - circle.centerX) ** 2 + (mouseY - circle.centerY) ** 2) <= circle.radius) {
+                        canvas.style.cursor = 'pointer';
+                        handleCircleMouseMove(circle.subject);
+                    }
+                });
+    
+                redrawCanvas();
             });
-        }
     
-        // Function to redraw the canvas with updated hover effect
-        const redrawCanvas = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            canvas.addEventListener('mouseout', () => {
+                handleCircleMouseOut();
+            });
     
-            // Draw the image onto the canvas
-            ctx.drawImage(img, 0, 0, img.width, img.height);
-
-            
-            circles && circles.forEach(({ centerX, centerY, radius, subject }) => {
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
-        
-                if (currentSubject === subject) {
-                    ctx.strokeStyle = 'blue'; // Set the stroke color to blue when hovered
-                    ctx.lineWidth = 3;
+            canvas.addEventListener('click', (event) => {
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = (event.clientX - rect.left) / scaleX; // Adjust for scaling
+                const mouseY = (event.clientY - rect.top) / scaleY;   // Adjust for scaling
+    
+                circles.forEach(circle => {
+                    if (
+                        Math.sqrt((mouseX - circle.centerX) ** 2 + (mouseY - circle.centerY) ** 2) <= circle.radius
+                    ) {
+                        handleCircleClick(circle.subject);
+                    }
+                });
+            });
+    
+            const handleCircleMouseMove = (subject) => {
+                setHoverSubject(subject);
+                redrawCanvas();
+            };
+    
+            const handleCircleMouseOut = () => {
+                canvas.style.cursor = 'default';
+                redrawCanvas();
+            };
+    
+            const handleCircleClick = (subject) => {
+                setCurrentSubject(subject);
+                redrawCanvas();
+            };
+    
+            if (Array.isArray(results)) {
+                results.forEach(subject => {
+                    let { x_min, x_max, y_min, y_max } = subject.box;
+    
+                    const centerX = (x_max + x_min) / 2 * scaleX; // Adjust for scaling
+                    const centerY = (y_max + y_min) / 2 * scaleY; // Adjust for scaling
+                    const radius = Math.max((x_max - x_min) / 2 * scaleX, (y_max - y_min) / 2 * scaleY); // Adjust for scaling
+    
+                    circles.push({ centerX, centerY, radius, subject });
+                });
+            }
+    
+            const redrawCanvas = () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    
+                circles.forEach(({ centerX, centerY, radius, subject }) => {
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+    
+                    if (currentSubject === subject) {
+                        ctx.strokeStyle = 'blue';
+                        ctx.lineWidth = 3;
+                        ctx.stroke();
+                        return;
+                    } 
+    
+                    if (hoverSubject === subject) {
+                        ctx.strokeStyle = 'white';
+                        ctx.lineWidth = 3;
+                    } else {
+                        ctx.strokeStyle = 'red';
+                        ctx.lineWidth = 2;
+                    }
+    
                     ctx.stroke();
-                    return;
-                } 
-                
-                if (hoverSubject === subject) {
-                    ctx.strokeStyle = 'white'; // Set the stroke color to blue when hovered
-                    ctx.lineWidth = 3;
-                } else {
-                    ctx.strokeStyle = 'red'; // Set the stroke color to red when not hovered
-                    ctx.lineWidth = 2;
-                }
-        
-                ctx.stroke();
-            });
-        };
+                });
+            };
     
-        // Initial canvas rendering
-        redrawCanvas();
+            // Initial canvas rendering
+            redrawCanvas();
         };
-    }, [resultImg, results, currentSubject, mouseXpos, mouseYpos]);
-  
+    }, [props.file, results, currentSubject, mouseXpos, mouseYpos]);
+    
   
     return (
         <div className='results-page'>

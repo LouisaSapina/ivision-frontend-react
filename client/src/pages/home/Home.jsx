@@ -5,10 +5,14 @@ import cl from './Home.module.css';
 import FileUploader from '../../components/fileuploader/FileUploader';
 import matches from '../data/foundedMatches';
 import Button from '../../components/UI/button/Button';
+import Results from '../results/Results';
+import Processing from '../processing/Processing';
 
 function Home() {
 
     const navigate = useNavigate();
+
+    const [isSearched, setSearched] = useState(false);
 
     const handleSubmit = () => {
         navigate('/search');
@@ -16,6 +20,7 @@ function Home() {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+    const [file, setFile] = useState(null);
 
     const handleSearch = () => {
         // Perform search logic here based on the searchTerm
@@ -28,10 +33,21 @@ function Home() {
         setSearchResults(filteredResults);
     };
 
+    const handleFileSearch = () => {
+        setSearched(true);
+    }
+
+    const handleFileUpload = (file) => {
+        console.log(file);
+        setFile(file)
+    }
+
     return (
         <div className={cl.home__wrapper}>
             <Header />
-            <div className={cl.container}>
+            {!isSearched ? 
+            (
+                <div className={cl.container}>
                 <div className={cl.search__line}>
                     <h2 className={cl.search__text}>Поиск по ИИН</h2>
                     <div className={cl.search}>
@@ -51,11 +67,15 @@ function Home() {
                 </div>
                 <h2 className={cl.or}>ИЛИ</h2>
                 <div className={cl.file__selector}>
-                    <FileUploader />
+                    <FileUploader handleFileUpload={handleFileUpload} handleFileSearch={handleFileSearch}/>
                     
                 </div>
                 
             </div>
+            ) : 
+            (
+                <Processing file={file} />
+            )}
         </div>
     );
 }

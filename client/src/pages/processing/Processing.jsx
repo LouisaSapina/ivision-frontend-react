@@ -7,7 +7,7 @@ import ImgProcessing from '../imgprocessing/ImgProcessing';
 import Indicator from '../../components/UI/indicator/Indicator';
 import Results from '../results/Results';
 
-function Processing() {
+function Processing(props) {
     const navigate = useNavigate();
 
     const handleSubmit = () => {
@@ -27,8 +27,8 @@ function Processing() {
 
     return (
         <div className={cl.processingWrapper}>
-            <Header />
-            {loading ? <Indicator style={{ marginTop: "38px" }} /> : <Results />}
+            {/* <Header /> */}
+            {loading ? <Indicator style={{ marginTop: "38px" }} /> : <Results file={props.file}/>}
         </div>
     );
 }
