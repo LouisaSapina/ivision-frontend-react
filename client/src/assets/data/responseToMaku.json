@@ -1,0 +1,635 @@
+{
+    "result": [
+        {
+            "box": {
+                "probability": 0.99997,
+                "x_max": 700,
+                "y_max": 251,
+                "x_min": 671,
+                "y_min": 220
+            },
+            "subjects": [
+                {
+                    "subject": "020927501679",
+                    "similarity": 0.75774
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99996,
+                "x_max": 641,
+                "y_max": 252,
+                "x_min": 612,
+                "y_min": 221
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.88791
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99858,
+                "x_max": 128,
+                "y_max": 256,
+                "x_min": 101,
+                "y_min": 224
+            },
+            "subjects": [
+                {
+                    "subject": "020131550302",
+                    "similarity": 0.57128
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 1.0,
+                "x_max": 190,
+                "y_max": 257,
+                "x_min": 163,
+                "y_min": 227
+            },
+            "subjects": [
+                {
+                    "subject": "Elon Musk",
+                    "similarity": 0.81453
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99998,
+                "x_max": 466,
+                "y_max": 232,
+                "x_min": 439,
+                "y_min": 203
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.99052
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99898,
+                "x_max": 113,
+                "y_max": 163,
+                "x_min": 84,
+                "y_min": 136
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.98904
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99996,
+                "x_max": 523,
+                "y_max": 243,
+                "x_min": 497,
+                "y_min": 213
+            },
+            "subjects": [
+                {
+                    "subject": "780816350053",
+                    "similarity": 0.61421
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99999,
+                "x_max": 385,
+                "y_max": 243,
+                "x_min": 360,
+                "y_min": 213
+            },
+            "subjects": [
+                {
+                    "subject": "020927501679",
+                    "similarity": 0.92457
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 1.0,
+                "x_max": 148,
+                "y_max": 172,
+                "x_min": 122,
+                "y_min": 145
+            },
+            "subjects": [
+                {
+                    "subject": "020131550302",
+                    "similarity": 0.641
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99999,
+                "x_max": 680,
+                "y_max": 206,
+                "x_min": 654,
+                "y_min": 179
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.93675
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99987,
+                "x_max": 696,
+                "y_max": 144,
+                "x_min": 670,
+                "y_min": 117
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.97784
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99977,
+                "x_max": 73,
+                "y_max": 148,
+                "x_min": 47,
+                "y_min": 121
+            },
+            "subjects": [
+                {
+                    "subject": "780816350053",
+                    "similarity": 0.87255
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99968,
+                "x_max": 715,
+                "y_max": 132,
+                "x_min": 689,
+                "y_min": 105
+            },
+            "subjects": [
+                {
+                    "subject": "020927501679",
+                    "similarity": 0.75903
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99972,
+                "x_max": 53,
+                "y_max": 163,
+                "x_min": 26,
+                "y_min": 138
+            },
+            "subjects": [
+                {
+                    "subject": "Elon Musk",
+                    "similarity": 0.88514
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99923,
+                "x_max": 276,
+                "y_max": 151,
+                "x_min": 248,
+                "y_min": 127
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.95032
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99998,
+                "x_max": 316,
+                "y_max": 230,
+                "x_min": 290,
+                "y_min": 205
+            },
+            "subjects": [
+                {
+                    "subject": "831006350817",
+                    "similarity": 0.69266
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99996,
+                "x_max": 581,
+                "y_max": 240,
+                "x_min": 555,
+                "y_min": 215
+            },
+            "subjects": [
+                {
+                    "subject": "030320551607",
+                    "similarity": 0.74417
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.9998,
+                "x_max": 362,
+                "y_max": 155,
+                "x_min": 336,
+                "y_min": 130
+            },
+            "subjects": [
+                {
+                    "subject": "780816350053",
+                    "similarity": 0.98688
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99998,
+                "x_max": 81,
+                "y_max": 112,
+                "x_min": 56,
+                "y_min": 88
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.7234
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99952,
+                "x_max": 649,
+                "y_max": 145,
+                "x_min": 624,
+                "y_min": 121
+            },
+            "subjects": [
+                {
+                    "subject": "020927501679",
+                    "similarity": 0.91797
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99946,
+                "x_max": 619,
+                "y_max": 229,
+                "x_min": 594,
+                "y_min": 205
+            },
+            "subjects": [
+                {
+                    "subject": "030320551607",
+                    "similarity": 0.96242
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99997,
+                "x_max": 134,
+                "y_max": 111,
+                "x_min": 111,
+                "y_min": 86
+            },
+            "subjects": [
+                {
+                    "subject": "011207550683",
+                    "similarity": 0.71374
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99985,
+                "x_max": 191,
+                "y_max": 174,
+                "x_min": 166,
+                "y_min": 151
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.69468
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99999,
+                "x_max": 220,
+                "y_max": 152,
+                "x_min": 197,
+                "y_min": 128
+            },
+            "subjects": [
+                {
+                    "subject": "020927501679",
+                    "similarity": 0.9841
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99997,
+                "x_max": 511,
+                "y_max": 139,
+                "x_min": 488,
+                "y_min": 115
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.79371
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99982,
+                "x_max": 278,
+                "y_max": 209,
+                "x_min": 255,
+                "y_min": 185
+            },
+            "subjects": [
+                {
+                    "subject": "011029550438",
+                    "similarity": 0.77526
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99862,
+                "x_max": 264,
+                "y_max": 89,
+                "x_min": 241,
+                "y_min": 65
+            },
+            "subjects": [
+                {
+                    "subject": "011207550683",
+                    "similarity": 0.73694
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99992,
+                "x_max": 562,
+                "y_max": 141,
+                "x_min": 539,
+                "y_min": 118
+            },
+            "subjects": [
+                {
+                    "subject": "011207550683",
+                    "similarity": 0.42252
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99988,
+                "x_max": 430,
+                "y_max": 67,
+                "x_min": 407,
+                "y_min": 44
+            },
+            "subjects": [
+                {
+                    "subject": "020927501679",
+                    "similarity": 0.75392
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99997,
+                "x_max": 357,
+                "y_max": 86,
+                "x_min": 335,
+                "y_min": 62
+            },
+            "subjects": [
+                {
+                    "subject": "Elon Musk",
+                    "similarity": 0.84716
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99995,
+                "x_max": 427,
+                "y_max": 157,
+                "x_min": 404,
+                "y_min": 135
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.74617
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99945,
+                "x_max": 497,
+                "y_max": 115,
+                "x_min": 474,
+                "y_min": 93
+            },
+            "subjects": [
+                {
+                    "subject": "831006350817",
+                    "similarity": 0.51388
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.9989,
+                "x_max": 489,
+                "y_max": 135,
+                "x_min": 466,
+                "y_min": 113
+            },
+            "subjects": [
+                {
+                    "subject": "Elon Musk",
+                    "similarity": 0.61377
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99999,
+                "x_max": 460,
+                "y_max": 148,
+                "x_min": 439,
+                "y_min": 124
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.58898
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99989,
+                "x_max": 304,
+                "y_max": 95,
+                "x_min": 283,
+                "y_min": 72
+            },
+            "subjects": [
+                {
+                    "subject": "831006350817",
+                    "similarity": 0.78368
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99872,
+                "x_max": 538,
+                "y_max": 118,
+                "x_min": 517,
+                "y_min": 95
+            },
+            "subjects": [
+                {
+                    "subject": "780816350053",
+                    "similarity": 0.60631
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.9982,
+                "x_max": 402,
+                "y_max": 78,
+                "x_min": 381,
+                "y_min": 56
+            },
+            "subjects": [
+                {
+                    "subject": "020927501679",
+                    "similarity": 0.8912
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.9977,
+                "x_max": 400,
+                "y_max": 140,
+                "x_min": 378,
+                "y_min": 119
+            },
+            "subjects": [
+                {
+                    "subject": "870507351119",
+                    "similarity": 0.92698
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99984,
+                "x_max": 580,
+                "y_max": 147,
+                "x_min": 560,
+                "y_min": 124
+            },
+            "subjects": [
+                {
+                    "subject": "020927501679",
+                    "similarity": 0.93247
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.96799,
+                "x_max": 375,
+                "y_max": 88,
+                "x_min": 355,
+                "y_min": 65
+            },
+            "subjects": [
+                {
+                    "subject": "780816350053",
+                    "similarity": 0.66789
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99991,
+                "x_max": 327,
+                "y_max": 88,
+                "x_min": 306,
+                "y_min": 67
+            },
+            "subjects": [
+                {
+                    "subject": "020927501679",
+                    "similarity": 0.69039
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99973,
+                "x_max": 219,
+                "y_max": 122,
+                "x_min": 198,
+                "y_min": 101
+            },
+            "subjects": [
+                {
+                    "subject": "Elon Musk",
+                    "similarity": 0.89095
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99938,
+                "x_max": 604,
+                "y_max": 149,
+                "x_min": 583,
+                "y_min": 128
+            },
+            "subjects": [
+                {
+                    "subject": "011207550683",
+                    "similarity": 0.67962
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99865,
+                "x_max": 166,
+                "y_max": 113,
+                "x_min": 147,
+                "y_min": 90
+            },
+            "subjects": [
+                {
+                    "subject": "011207550683",
+                    "similarity": 0.49095
+                }
+            ]
+        }, {
+            "box": {
+                "probability": 0.99926,
+                "x_max": 445,
+                "y_max": 88,
+                "x_min": 425,
+                "y_min": 67
+            },
+            "subjects": [
+                {
+                    "subject": "831006350817",
+                    "similarity": 0.65693
+                }
+            ]
+        }
+    ]
+}

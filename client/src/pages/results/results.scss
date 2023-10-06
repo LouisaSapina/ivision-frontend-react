@@ -1,0 +1,177 @@
+.results-page {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    .container {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .result-head {
+        width: 100%;
+        margin-top: 102px;
+
+        display: flex;
+        flex-direction: row;
+        gap: 37px;
+
+        margin-bottom: 27px;
+    
+        // border: 1px solid red;
+
+        .result-img {
+            // width: 100%;
+            
+            canvas {
+                // max-height: 700px;
+            }
+        }
+
+        .result-info-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            // min-width: 40%;
+
+            .result-info {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h1 {
+                    color: #000;
+                    font-family: Montserrat;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+
+                    align-self: center;
+                    margin-bottom: 15px;
+                }
+
+                h4 {
+                    color: #000;
+                    font-family: Montserrat;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                p {
+                    color: #000;
+                    font-family: Montserrat;
+                    font-size: 18px;
+                    // font-style: normal;
+                    // line-height: normal;
+                }
+            }
+
+            .actions {
+                // align-self: flex-end;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    .result-matches-count {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        margin-bottom: 25px;
+    }
+
+    .result-matches {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .result-card-link {
+            text-decoration: none;
+
+        }
+
+
+        .result-card {
+            padding: 25px;
+            display: flex;
+            flex-direction: row;
+
+            gap: 45px;
+
+            border-radius: 15px;
+            background: #FFF;
+            box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.10);
+
+            img {
+                width: 185px;
+                // height: 246px;
+                flex-shrink: 0;
+                border-radius: 13px;
+            }
+
+            .result-card-content {
+                width: 100%;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .result-card-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+
+                    p {
+                        color: #000;
+                        font-family: Montserrat;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+                }
+
+                .result-match-info {
+                    p {
+                        color: #8A8A8A;
+                        font-family: Montserrat;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+
+                    span {
+                        color: #8A8A8A;
+                        font-family: Montserrat;
+                        font-size: 29px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+                }
+
+
+
+            }
+        }
+    }
+
+}
