@@ -188,6 +188,11 @@ function Results(props) {
         };
     }, [props.file, results, currentSubject, mouseXpos, mouseYpos]);
     
+
+    const getSimiliarityByIIN = (iin) => {
+        results.filter(results => results.subjects[0].subject === iin)[0].subjects[0].subject;
+    }
+
   
     return (
         <div className='results-page'>
@@ -242,7 +247,7 @@ function Results(props) {
                                     </div>
                                     <div className="result-match-info">
                                         <p>
-                                            Совпадение <span>69.9%</span>
+                                            Совпадение <span>{getSimiliarityByIIN(data.iin)}%</span>
                                         </p>
                                     </div>
                                 </div>
