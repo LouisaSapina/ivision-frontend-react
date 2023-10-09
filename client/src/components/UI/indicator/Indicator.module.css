@@ -12,6 +12,11 @@
   border-radius: 13px;
   border: 2px dashed #9C9C9C;
 }
+
+.container .processing__block .processing__img > img {
+  filter: blur(10px);
+}
+
 .container .processing__index {
   display: flex;
   flex-direction: column;

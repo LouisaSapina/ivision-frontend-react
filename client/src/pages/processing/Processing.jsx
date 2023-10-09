@@ -6,6 +6,7 @@ import processingImg from '../../assets/images/processing.png';
 import ImgProcessing from '../imgprocessing/ImgProcessing';
 import Indicator from '../../components/UI/indicator/Indicator';
 import Results from '../results/Results';
+import axios from 'axios';
 
 function Processing(props) {
     const navigate = useNavigate();
@@ -15,20 +16,37 @@ function Processing(props) {
     };
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        // Simulating a delay for demonstration purposes
-        const timer = setTimeout(() => {
-        setLoading(false);
-        
-        }, 2000);
+    const [results, setResults] = useState([]);
+    const [databaseData, setDatabaseData] = useState([])
 
-        return () => clearTimeout(timer);
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                // Create a FormData object to send the image file
+                const formData = new FormData();
+                formData.append('image', props.file);
+    
+                const res = await axios.post('http://localhost:23000/subjectsList', formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data', // Set the content type to multipart/form-data
+                    },
+                });
+    
+                setResults(res.data.recognitionData);
+                setDatabaseData(res.data.databaseData);
+            } catch (error) {
+                console.error(error);
+            }
+
+            setLoading(false)
+        }
+    
+        fetchData();
     }, []);
 
     return (
         <div className={cl.processingWrapper}>
-            {/* <Header /> */}
-            {loading ? <Indicator style={{ marginTop: "38px" }} /> : <Results file={props.file} handleNavBack={props.handleNavBack}/>}
+            {loading ? <Indicator file={props.file} style={{ marginTop: "38px" }} /> : <Results results={results} databaseData={databaseData} file={props.file} handleNavBack={props.handleNavBack}/>}
         </div>
     );
 }

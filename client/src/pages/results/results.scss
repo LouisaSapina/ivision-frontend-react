@@ -6,9 +6,12 @@
     .container {
         width: 75%;
         margin: 0 auto;
+        position: relative;
     }
 
     .nav-back {
+        position: absolute;
+        left: -75px;
         cursor: pointer;
 
         height: 34px;

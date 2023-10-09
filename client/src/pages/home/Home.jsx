@@ -15,7 +15,8 @@ function Home() {
     const [isSearched, setSearched] = useState(false);
 
     const handleSubmit = () => {
-        navigate('/search');
+
+        navigate(`/results/${searchTerm}`);
     };
 
     const [searchTerm, setSearchTerm] = useState('');
@@ -53,30 +54,29 @@ function Home() {
             {!isSearched ? 
             (
                 <div className={cl.container}>
-                <div className={cl.search__line}>
-                    <h2 className={cl.search__text}>Поиск по ИИН</h2>
-                    <div className={cl.search}>
-                        <input 
-                            type='text' 
-                            className={cl.search__input}
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                        <input 
-                            type='submit' 
-                            value='Запрос' 
-                            className={cl.submit__btn} 
-                            onClick={handleSubmit}
-                        />
+                    <div className={cl.search__line}>
+                        <h2 className={cl.search__text}>Поиск по ИИН</h2>
+                        <div className={cl.search}>
+                            <input 
+                                type='text' 
+                                className={cl.search__input}
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                            <input 
+                                type='submit' 
+                                value='Запрос' 
+                                className={cl.submit__btn} 
+                                onClick={handleSubmit}
+                            />
+                        </div>
+                    </div>
+                    <h2 className={cl.or}>ИЛИ</h2>
+                    <div className={cl.file__selector}>
+                        <FileUploader handleFileUpload={handleFileUpload} handleFileSearch={handleFileSearch}/>
+                        
                     </div>
                 </div>
-                <h2 className={cl.or}>ИЛИ</h2>
-                <div className={cl.file__selector}>
-                    <FileUploader handleFileUpload={handleFileUpload} handleFileSearch={handleFileSearch}/>
-                    
-                </div>
-                
-            </div>
             ) : 
             (
                 <Processing file={file} handleNavBack={handleNavBack}/>

@@ -22,18 +22,25 @@
 }
 .matchesWrapper .container .results .processing__results {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 9px;
   position: relative;
-  width: 829px;
+  width: 100%;
 }
+
+.processing__results > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .matchesWrapper .container .results .processing__results .processing__results__status {
   font-size: 30px;
-  font-weight: 600;
   margin-left: 37px;
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 100;
 }
+
 .matchesWrapper .container .results .processing__results .results__more {
   position: absolute;
   bottom: 0;
@@ -50,12 +57,16 @@
 }
 .matchesWrapper .container .open__sources {
   display: flex;
+  flex-wrap: wrap;
   gap: 29px;
+
+  margin-bottom: 50px;
 }
 .matchesWrapper .container .open__sources .card {
   display: flex;
   flex-direction: column;
-  width: 349px;
+  min-width: 300px;
+  max-width: 500px;
   border-radius: 15px;
   background: #ffffff;
   box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.1);

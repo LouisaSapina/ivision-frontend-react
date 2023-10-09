@@ -25,39 +25,8 @@ function Results(props) {
     const [mouseXpos, setMouseXpos] = useState(null);
     const [mouseYpos, setMouseYpos] = useState(null);
 
-    const [results, setResults] = useState([]);
-    const [databaseData, setDatabaseData] = useState([])
-
-    const [resultImg, setResultImg] = useState(null)
-    
-    useEffect(() => {
-        setResultImg(props.file)
-    }, [])
-
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                // Create a FormData object to send the image file
-                const formData = new FormData();
-                formData.append('image', props.file);
-    
-                const res = await axios.post('http://localhost:23000/subjectsList', formData, {
-                    headers: {
-                        'Content-Type': 'multipart/form-data', // Set the content type to multipart/form-data
-                    },
-                });
-    
-                setResults(res.data.recognitionData);
-                setDatabaseData(res.data.databaseData);
-            } catch (error) {
-                console.error(error);
-            }
-        }
-    
-        fetchData();
-    }, []);
-    
-
+    const [results, setResults] = useState(props.results);
+    const [databaseData, setDatabaseData] = useState(props.databaseData);
 
     useEffect(() => {
         const canvas = canvasRef.current;

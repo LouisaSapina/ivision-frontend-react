@@ -29,8 +29,8 @@ const FileUploader = (props) => {
 
     const handleChooseAnotherFile = (event) => {
         // setSelectedFile(null);
-        const file = event.target.files[0];
-        setSelectedFile(file);
+        // const file = event.target.files[0];
+        setSelectedFile(null);
     };
 
     const navigate = useNavigate();
