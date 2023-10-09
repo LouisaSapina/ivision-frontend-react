@@ -77,17 +77,18 @@ import pdf from '../../assets/icons/pdf.png';
 import jsonData from '../data/data.json';
 
 const Matches = () => {
-  const { id } = useParams();
+  const { iin } = useParams();
   const [card, setCard] = useState(null);
 
   useEffect(() => {
     const fetchCardData = () => {
-      const selectedCard = jsonData.photos.find((item) => item.id === parseInt(id));
+      const selectedCard = jsonData.photos.find((item) => item.id === parseInt(iin));
+      
       setCard(selectedCard);
     };
 
     fetchCardData();
-  }, [id]);
+  }, [iin]);
 
   return (
     <div className={cl.matchesWrapper}>

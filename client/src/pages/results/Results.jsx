@@ -12,6 +12,8 @@ import jsonData from '../data/data.json';
 
 import jsonResponse from './jsonResponse.js'
 
+import BackLeftIcon from './../../assets/icons/back_left.png';
+
 import './results.scss';
 
 
@@ -73,19 +75,34 @@ function Results(props) {
             // }
         ];
     
-        // Define the desired canvas dimensions
         const canvasWidth = 700;
         const canvasHeight = 500;
     
         img.onload = () => {
-            canvas.width = canvasWidth;
-            canvas.height = canvasHeight;
+            // canvas.width = img.width;
+            // canvas.height = img.height;
+
+            let scaleX = 1;
+            let scaleY = 1;
+
+            if (img.width >= 500) {
+                canvas.width = canvasWidth;
+                canvas.height = canvasHeight;
+                
+                scaleX = canvasWidth / img.width
+                scaleY = canvasHeight / img.height;
+            } else {
+                canvas.width = img.width;
+                canvas.height = img.height;
+            }
+
     
-            // Calculate the scale factors for the image
-            const scaleX = canvasWidth / img.width;
-            const scaleY = canvasHeight / img.height;
-    
-            // Adjust the circle positions based on the scaling factors
+            
+
+            console.log(img.width, img.height)
+            console.log(img.width, img.height)
+            console.log(scaleX, scaleY)
+
             circles = circles.map(circle => ({
                 centerX: circle.centerX * scaleX,
                 centerY: circle.centerY * scaleY,
@@ -97,8 +114,8 @@ function Results(props) {
     
             canvas.addEventListener('mousemove', (event) => {
                 const rect = canvas.getBoundingClientRect();
-                const mouseX = (event.clientX - rect.left) * scaleX; // Adjust for scaling
-                const mouseY = (event.clientY - rect.top) * scaleY;   // Adjust for scaling
+                const mouseX = (event.clientX - rect.left); // Adjust for scaling
+                const mouseY = (event.clientY - rect.top);   // Adjust for scaling
     
                 setMouseXpos(mouseX);
                 setMouseYpos(mouseY);
@@ -125,8 +142,8 @@ function Results(props) {
     
             canvas.addEventListener('click', (event) => {
                 const rect = canvas.getBoundingClientRect();
-                const mouseX = (event.clientX - rect.left) / scaleX; // Adjust for scaling
-                const mouseY = (event.clientY - rect.top) / scaleY;   // Adjust for scaling
+                const mouseX = (event.clientX - rect.left); // Adjust for scaling
+                const mouseY = (event.clientY - rect.top);   // Adjust for scaling
     
                 circles.forEach(circle => {
                     if (
@@ -189,6 +206,12 @@ function Results(props) {
     
                     ctx.stroke();
                 });
+
+                // ctx.strokeStyle = 'yellow';
+                // ctx.lineWidth = 3;
+                // ctx.beginPath();
+                // ctx.arc(mouseXpos, mouseYpos, 2, 0, 2 * Math.PI);
+                // ctx.stroke();
             };
     
             // Initial canvas rendering
@@ -200,6 +223,9 @@ function Results(props) {
     return (
         <div className='results-page'>
             <div className={'container'}>
+                <div className='nav-back'>
+                    <img src={BackLeftIcon} alt="back" onClick={props.handleNavBack}/>
+                </div>
                 <div className={'result-head'}>
                     <div className={'result-img'}>
                         {/* <img src={resultImg} alt='img' /> */}

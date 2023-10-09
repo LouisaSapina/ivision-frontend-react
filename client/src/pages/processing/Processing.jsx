@@ -28,7 +28,7 @@ function Processing(props) {
     return (
         <div className={cl.processingWrapper}>
             {/* <Header /> */}
-            {loading ? <Indicator style={{ marginTop: "38px" }} /> : <Results file={props.file}/>}
+            {loading ? <Indicator style={{ marginTop: "38px" }} /> : <Results file={props.file} handleNavBack={props.handleNavBack}/>}
         </div>
     );
 }

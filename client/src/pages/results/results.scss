@@ -8,9 +8,22 @@
         margin: 0 auto;
     }
 
+    .nav-back {
+        cursor: pointer;
+
+        height: 34px;
+
+        margin-top: 30px;
+        margin-left: 20px;
+
+        img {
+            height: 100%;
+        }
+    }
+
     .result-head {
         width: 100%;
-        margin-top: 102px;
+        margin-top: 50px;
 
         display: flex;
         flex-direction: row;
@@ -24,7 +37,7 @@
             // width: 100%;
             
             canvas {
-                max-height: 500px;
+                // max-height: 500px;
             }
         }
 

@@ -42,6 +42,11 @@ function Home() {
         setFile(file)
     }
 
+    const handleNavBack = () => {
+        setFile(null)
+        setSearched(false)
+    }
+
     return (
         <div className={cl.home__wrapper}>
             <Header />
@@ -74,7 +79,7 @@ function Home() {
             </div>
             ) : 
             (
-                <Processing file={file} />
+                <Processing file={file} handleNavBack={handleNavBack}/>
             )}
         </div>
     );

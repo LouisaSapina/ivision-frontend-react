@@ -15,7 +15,7 @@ function App() {
           <Route path='/' element={<Home />}></Route>
           <Route path='/search' element={<Processing />} />
           <Route exact path='/results' element={<Results />} />
-          <Route path='/results/:id' element={<Matches />} />
+          <Route path='/results/:iin' element={<Matches />} />
         </Routes>
       </BrowserRouter>
     </div>
